@@ -1,19 +1,4 @@
-
-// read the array from data text file  and sort it
-const requesthandler =  function () {
-    let ArrayFromFile = this.responseText.split(',').map(Number);
-    let ascendingSortedArray = ascendingSorting(ArrayFromFile);
-    console.log(ascendingSortedArray);
-}
-  
-  var fileRequest = new XMLHttpRequest();
-  fileRequest.addEventListener("load", requesthandler);
-  fileRequest.open("GET", "http://127.0.0.1:5500//data.txt");
-  fileRequest.send();
-
-  
-  
-  // fix the issues in code
+    // fix the issues in code
 
   let numbers = [5,8,0,1,9,11,15,16];
 
@@ -83,4 +68,17 @@ const requesthandler =  function () {
   console.log("Numbers list After descending sorting: ", descendingSorting(copyOfNumbers))
   
 
+// read the array from data text file  and sort it
+const requesthandler =  function () {
+    let ArrayFromFile = this.responseText.split(',').map(Number);
+    let ascendingSortedArray = ascendingSorting(ArrayFromFile);
+    console.log(ascendingSortedArray);
+}
+  
+  var fileRequest = new XMLHttpRequest();
+  fileRequest.addEventListener("load", requesthandler);
+  fileRequest.open("GET", "http://127.0.0.1:5500//data.txt");
+  fileRequest.send();
 
+  
+  
